@@ -2,6 +2,7 @@ import time
 import flet as ft
 import model as md
 
+
 class SpellChecker:
 
     def __init__(self, view):
@@ -44,10 +45,9 @@ class SpellChecker:
             case _:
                 return None
 
-
     def printMenu(self):
         print("______________________________\n" +
-              "      SpellChecker 101\n"+
+              "      SpellChecker 101\n" +
               "______________________________\n " +
               "Seleziona la lingua desiderata\n"
               "1. Italiano\n" +

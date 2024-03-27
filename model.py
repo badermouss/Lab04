@@ -1,6 +1,7 @@
 import dictionary as d
 import richWord as rw
 
+
 class MultiDictionary:
 
     def __init__(self):
@@ -90,7 +91,7 @@ class MultiDictionary:
             elif language == "spanish":
                 currentDic = self._spanish.dict
                 found = dichotomicSearch(word, currentDic)
-            if (found):
+            if found:
                 richW.corretta = True
 
             parole.append(richW)
@@ -102,13 +103,13 @@ def dichotomicSearch(word, currentDic):
     start = 0
     end = len(currentDic)
 
-    while (start != end):
-        mean = start + int((end - start)/2)
+    while start != end:
+        mean = start + int((end - start) / 2)
         currentW = currentDic[mean]
         if word == currentW:
             return True
         elif word > currentW:  # in python < applied to strings gives True if the first string is before in lexicographic order
-            start = mean+1
+            start = mean + 1
         else:
             end = mean
 
